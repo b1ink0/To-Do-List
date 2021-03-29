@@ -1,0 +1,28 @@
+$base-color: #00171F;
+$base-color-1: #273469;
+$base-color-2: #30343F;
+$base-color-3: #00A8E8;
+$base-color-4: #FAFAFF;
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    min-height: 100vh;
+    width: 100%;
+}
+body {
+    @include flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: hsla(171, 87%, 67%, 1);
+
+background: linear-gradient(90deg, hsla(171, 87%, 67%, 1) 0%, hsla(236, 100%, 72%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(171, 87%, 67%, 1) 0%, hsla(236, 100%, 72%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(171, 87%, 67%, 1) 0%, hsla(236, 100%, 72%, 1) 100%);
+}
+#root, .App {
+    @include flex;
+}
