@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/To-Do-List/static/css/main.04c47823.chunk.css",
+    "main.css": "/To-Do-List/static/css/main.1a74e43c.chunk.css",
     "main.js": "/To-Do-List/static/js/main.b76ba4f4.chunk.js",
     "main.js.map": "/To-Do-List/static/js/main.b76ba4f4.chunk.js.map",
     "runtime-main.js": "/To-Do-List/static/js/runtime-main.68edf694.js",
@@ -8,7 +8,7 @@
     "static/js/2.42079efa.chunk.js": "/To-Do-List/static/js/2.42079efa.chunk.js",
     "static/js/2.42079efa.chunk.js.map": "/To-Do-List/static/js/2.42079efa.chunk.js.map",
     "index.html": "/To-Do-List/index.html",
-    "static/css/main.04c47823.chunk.css.map": "/To-Do-List/static/css/main.04c47823.chunk.css.map",
+    "static/css/main.1a74e43c.chunk.css.map": "/To-Do-List/static/css/main.1a74e43c.chunk.css.map",
     "static/js/2.42079efa.chunk.js.LICENSE.txt": "/To-Do-List/static/js/2.42079efa.chunk.js.LICENSE.txt",
     "static/media/delete.90a1fb1c.svg": "/To-Do-List/static/media/delete.90a1fb1c.svg",
     "static/media/moon1.a38c7ab3.svg": "/To-Do-List/static/media/moon1.a38c7ab3.svg",
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.68edf694.js",
     "static/js/2.42079efa.chunk.js",
-    "static/css/main.04c47823.chunk.css",
+    "static/css/main.1a74e43c.chunk.css",
     "static/js/main.b76ba4f4.chunk.js"
   ]
 }
