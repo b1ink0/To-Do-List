@@ -1,6 +1,6 @@
 {
   "short_name": "To-Do-List",
-  "name": "Create React App Sample",
+  "name": "To-Do-List",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000",
+  "theme_color": "#fff",
   "background_color": "#000"
 }
