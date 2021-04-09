@@ -15,14 +15,18 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: hsla(171, 87%, 67%, 1);
-
-background: linear-gradient(90deg, hsla(171, 87%, 67%, 1) 0%, hsla(236, 100%, 72%, 1) 100%);
-
-background: -moz-linear-gradient(90deg, hsla(171, 87%, 67%, 1) 0%, hsla(236, 100%, 72%, 1) 100%);
-
-background: -webkit-linear-gradient(90deg, hsla(171, 87%, 67%, 1) 0%, hsla(236, 100%, 72%, 1) 100%);
+    background: rgb(238, 238, 238) ;
+    transition: all 0.5s;
 }
 #root, .App {
     @include flex;
 }
+.AppN {
+    @include flex;
+    background: #121212 ;
+    color: hsl(0, 0%, 87%);
+}
+button, select, option {
+    cursor: pointer;
+}
+

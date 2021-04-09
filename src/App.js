@@ -6,14 +6,17 @@ function App() {
   const [text, setText] = useState('') //for text
   const [todos, setTodos] = useState([]) // where main todos stored
   const [status, setStatus] = useState('all') // in which seate in it
+  const [night, setNight] = useState(false)
   const [filteredTodos, setFilteredTodos] = useState([]) // for storing filtered ones
   useEffect(()=>{
+    getLocalN()
     getLocalTodos()
   },[])
   useEffect(()=>{
     filterHandler()
+    saveLocalN()
     saveLocalTodos()
-  },[todos, status])
+  },[todos, status, night])
   const filterHandler = () => {
     switch(status){
       case 'completed':
@@ -39,8 +42,19 @@ function App() {
       setTodos(todoLocal)
     }
   }
+  const saveLocalN = () => {
+    localStorage.setItem('night', JSON.stringify(night))
+  }
+  const getLocalN = () => {
+    if (localStorage.getItem('night') === null ){
+      localStorage.setItem('night', JSON.stringify())
+    } else {
+      let localN = JSON.parse(localStorage.getItem('night'))
+      setNight(localN)
+    }
+  }
   return (
-    <div className="App">
+    <div className={`${night ? "AppN" : "App"}`}>
       <Todo
         filteredTodos={filteredTodos}
         setFilteredTodos={setFilteredTodos} 
@@ -50,6 +64,8 @@ function App() {
         setTodos={setTodos} 
         text={text} 
         setText={setText}
+        night={night}
+        setNight={setNight}
       />
     </div>
   );

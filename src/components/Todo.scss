@@ -4,140 +4,374 @@
     justify-content: center;
     align-items: center;
 }
-
-.form-container {
-    @include flex;
-    margin-top: 7%;
-    justify-content: end;
-    align-items: center;
-    flex-direction: column;
-}
-form {
-    @include flex1;
-    width: 80%;
-    .select {
-        width: 20%;
-    }
-    div {
-        @include flex1;
-        width: 100%;
-        height: 36px;
-        position: relative;
-        overflow: hidden;
-        input {
-            width: 100%;
-            height: 30px;
-            outline: none;
-            font-size: 27px;
-        }
-        button {
-            height: 35.5px;
-            width: 35.5px;
-            font-size: 30px;
-            background: $base-color-3;
-            border: none;
-            outline: none;
-            color: white;
-            cursor: pointer;
-        }
-        select {
-            left: 0;
-            width: 100%;
-            height: 36px;
-            position: absolute;
-            outline: none;
-            cursor: pointer;
-            color: $base-color-2;
-            option {
-                cursor: pointer;
-            }
-     
-        }
-    }
-}
-#div1 {
-    @include flex1;
-    width: 100%;
-    margin-top: 5%;
-    ul {
-        @include flex1;
-        width: 100%;
-        flex-direction: column;
-        list-style: none;
-        div {
-            @include flex1;
-            height: 36px;
-            width: 80%;
-            flex-direction: row;
-            padding: 5px;
-            button {
-                height: 35.5px;
-                width: 35.5px;
-                font-size: 27px;
-                background: $base-color-3;
-                border: none;
-                outline: none;
-                color: white;
-                cursor: pointer;
-            }
-            .trashBtn{
-                background: rgb(255, 46, 46);
-            }
-            li {
-                background: white;
-                height: 36px;
-                min-width: 30%;
-                font-size: 27px;
-                text-align: center;
-                padding-left: 10px ;
-            }
-
-        }
-    }
-}
 .completed {
     text-decoration: line-through;
     opacity: 0.5;
     color: rgb(87, 87, 87);
 }
-.select::after {
-    content: "\25BC";
-    position: absolute;
-    width: 35.5px;
-    height: 35.5px;
-    text-align: center;
-    padding-top: 9px ;
-    top: 0;
-    right: 0;
-    background: $base-color-3;
-    cursor: pointer;
-    pointer-events: none;
-  }
-  @media only screen and (max-width: 900px) {
-    form {
-        flex-direction: column;
-        div {
-            margin-top: 4%;
-        }
-        .select {
-            width: 50%;
-        }
-        select {
-            width: 100%;
-        }
-        #div1 ul div {
-            width: 100%;
-            overflow: hidden;
-        }
-        #div1 ul div button {
-            font-size: 25px;
-        }
-        li {
-            padding-top: 10px;
-            overflow: hidden;
-        }
-        form div input {
-            width: 100% !important;
+.App div {
+    width: 100%;
+    transition: all 0.5s;
+    position: relative;
+}
+form {
+    @include flex1;
+    width: 100%;
+    flex-direction: column;
+}
+.inputDiv {
+    @include flex1;
+    height: 50px;
+    border-radius: 50px;
+    width: 350px !important;
+    margin-top: 10px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 7px 5px #bbb,
+    0px 10px 5px rgba(212, 212, 212, 0.911);
+    overflow: hidden;
+    transition: all 0.5s;
+}
+input {
+    font-family: 'Zilla Slab', serif;
+    outline: none;
+    border: none;
+    background: none;
+    width: 300px;
+    font-size: 25px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 20px;
+    transition: all 0.5s;
+}
+.inputBtn {
+    @include flex1;
+    margin-left: -20px;
+    border: none;
+    background: #5ca8e0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: rgb(73, 38, 38);
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: 400;
+    position: relative;
+    transition: all 0.5s;
+    .btnSpan1 {
+        @include flex1;
+        position: absolute;
+        width: 30px;
+        height: 6px;
+        background: white;
+        transition: all 0.5s;
+    }
+    .btnSpan2 {
+        @include flex1;
+        position: absolute;
+        width: 30px;
+        height: 6px;
+        transform: rotate(90deg);
+        background: white;
+        transition: all 0.5s;
+    }
+}
+.select {
+    @include flex1;
+    font-family: 'Zilla Slab', serif;
+    height: 50px;
+    border-radius: 50px;
+    width: 350px !important;
+    margin-top: 20px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 7px 5px #bbb,
+    0px 10px 5px rgba(212, 212, 212, 0.911);
+    transition: all 0.5s;
+    h1 {
+        font-size: 25px;
+        font-weight: 550;
+    }
+}
+select {
+    font-family: 'Zilla Slab', serif;
+    padding-left: 20px;
+    font-size: 23px;
+    outline: none;
+    background: none;
+    border: none;
+    position: relative;
+    border: 1px solid rgba(44, 44, 44, 0.383);
+    border-radius: 50px;
+    transition: all 0.5s;
+}
+.h1 {
+    font-family: 'Zilla Slab', serif;
+    letter-spacing: 4px;
+    border-bottom: 3px double rgb(104, 104, 104);
+}
+.h2 {
+    border-bottom: 3px double rgb(104, 104, 104);
+    font-family: 'Zilla Slab', serif;
+    font-size: 30px;
+    font-style: normal;
+    text-transform: capitalize;
+    margin-top: 15px;
+    letter-spacing: 4px;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+.div1 {
+    position: relative;
+    width: 100%;
+    transition: all 0.5s;
+}
+ul {
+    @include flex1;
+    text-decoration: none;
+    padding-inline-start: 0px;
+    list-style: none;
+    width: 100%;
+    flex-direction: column;
+    margin: 0%;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+.todo {
+    @include flex1;
+    transition: all 0.5s;
+    width: 350px !important;
+    min-height: 50px;
+    background: white;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0px 7px 5px #bbb,
+                0px 10px 5px rgba(212, 212, 212, 0.911);
+    li {
+        font-family: 'Zilla Slab', serif;
+        width: 250px;
+        font-size: 25px;
+        display: flex;
+        align-items: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        transition: all 0.3s;
+        span {
+            width: 250px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            white-space: normal !important;
         }
     }
-  }
+    button {
+        width: 29px;
+        height: 29px;
+        border-radius: 100%;
+        border: none;
+        color: white;
+        outline: none;
+        font-size: 20px;
+        text-align: center;
+        transition: all 0.5s;
+    }
+}
+.completeBtn {
+    background: #5ca8e0;
+    margin-left: 2px;
+    transition: all 0.3s;
+}
+.completedBtn {
+    @include flex1;
+    background-color: rgb(0, 202, 0);
+    img {
+        width: 18px;
+        height: 16px;
+    }
+}
+.trashBtn {
+    @include flex1;
+    background: rgb(255, 52, 52);
+    margin-left: 10px;
+    transition: all 0.5s;
+    img {
+        width: 18px;
+        height: 16px;
+    }
+}
+.trash {
+    // margin: -25px;
+    transform: rotate(10deg) scale(0);
+    opacity: 0;
+}
+.nightMode {
+    @include flex1;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+    top: 20px;
+    right: 20px;
+    border: none;
+    outline: none;
+    background: rgb(255, 255, 255);
+    border-radius: 100%;
+    box-shadow: 0px 3px 5px #bbb,
+    0px 5px 5px rgba(212, 212, 212, 0.911);
+    transition: all 0.5s;
+}
+.nightModeN {
+    @include flex1;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+    top: 20px;
+    right: 20px;
+    border: none;
+    outline: none;
+    background: #3a3a3a;
+    border-radius: 100%;
+    box-shadow: none;
+}
+.selectN {
+    background: #232323;
+    color: hsl(0, 0%, 87%);
+    box-shadow: none;
+}
+.inputDivN {
+    @include flex1;
+    height: 50px;
+    border-radius: 50px;
+    width: 350px !important;
+    margin-top: 10px;
+    background: #232323;
+    color: hsl(0, 0%, 87%);
+    box-shadow: none;
+    overflow: hidden;
+}
+.inputN {
+    font-family: 'Zilla Slab', serif;
+    outline: none;
+    color: hsl(0, 0%, 87%);
+    border: none;
+    background: none;
+    width: 300px;
+    font-size: 25px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+.selectN {
+    font-family: 'Zilla Slab', serif;
+    padding-left: 20px;
+    font-size: 23px;
+    outline: none;
+    background: none;
+    border: none;
+    position: relative;
+    border: 1px solid hsl(0, 0%, 87%);
+    border-radius: 50px;
+}
+.selectN1 {
+    @include flex1;
+    font-family: 'Zilla Slab', serif;
+    height: 50px;
+    border-radius: 50px;
+    width: 350px !important;
+    margin-top: 20px;
+    background: #232323;
+    box-shadow: none;
+    h1 {
+        font-size: 25px;
+        font-weight: 550;
+    }
+}
+.inputBtnN {
+    @include flex1;
+    margin-left: -20px;
+    border: none;
+    background: #3a3a3a;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: rgb(73, 38, 38);
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: 400;
+    position: relative;
+    outline: none;
+    .btnSpan1 {
+        @include flex1;
+        position: absolute;
+        width: 30px;
+        height: 6px;
+        background: hsl(0, 0%, 87%) !important;
+    }
+    .btnSpan2 {
+        @include flex1;
+        position: absolute;
+        width: 30px;
+        height: 6px;
+        transform: rotate(90deg);
+        background: hsl(0, 0%, 87%) !important;
+    }
+}
+.completeBtnN{
+    background: #3a3a3a;
+}
+.trashBtnN {
+    background: #3a3a3a;
+    margin-left: 10px;
+    img {
+        width: 18px;
+        height: 16px;
+        filter: invert(1);
+    }
+}
+.todoN {
+    @include flex1;
+    transition: all 0.5s;
+    width: 350px !important;
+    min-height: 50px;
+    background: #232323;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: none;
+    li {
+        font-family: 'Zilla Slab', serif;
+        width: 250px;
+        font-size: 25px;
+        display: flex;
+        align-items: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        transition: all 0.3s;
+        span {
+            width: 250px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            white-space: normal !important;
+        }
+    }
+    button {
+        width: 29px;
+        height: 29px;
+        border-radius: 100%;
+        border: none;
+        color: hsl(0, 0%, 87%);
+        outline: none;
+        font-size: 20px;
+        text-align: center;
+    }
+}
+.nightModeImg{
+    width: 30px;
+    height: 30px;
+    transition: all 0.5s;
+}
+.nightModeImgN {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+    transition: all 0.5s;
+}
