@@ -37,7 +37,7 @@ function Todo({text, setText,
                     <img className={`${night ? "nightModeImgN" : "nightModeImg"}`} src={`${night ? LightMode : NightMode}`}/>
                 </button>
                 <div className={`${night ? "inputDivN" : "inputDiv"}`}>
-                    <input className={`${night ? "inputN" : "input"}`} type='text' value={text} onChange={e => setText(e.target.value)} required/>
+                    <input placeholder='Add your new to-do...' className={`${night ? "inputN" : "input"}`} type='text' value={text} onChange={e => setText(e.target.value)} required/>
                     <button className={`${night ? "inputBtnN" : "inputBtn"}`} type='submit' ><span className='btnSpan1'></span><span className='btnSpan2'></span></button>
                 </div>
                 <div className={`${night ? "selectN1" : "select"}`}>
