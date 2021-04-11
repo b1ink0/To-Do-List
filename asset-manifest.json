@@ -1,13 +1,15 @@
 {
   "files": {
     "main.css": "/To-Do-List/static/css/main.1a74e43c.chunk.css",
-    "main.js": "/To-Do-List/static/js/main.a6db5701.chunk.js",
-    "main.js.map": "/To-Do-List/static/js/main.a6db5701.chunk.js.map",
+    "main.js": "/To-Do-List/static/js/main.c238e605.chunk.js",
+    "main.js.map": "/To-Do-List/static/js/main.c238e605.chunk.js.map",
     "runtime-main.js": "/To-Do-List/static/js/runtime-main.68edf694.js",
     "runtime-main.js.map": "/To-Do-List/static/js/runtime-main.68edf694.js.map",
     "static/js/2.42079efa.chunk.js": "/To-Do-List/static/js/2.42079efa.chunk.js",
     "static/js/2.42079efa.chunk.js.map": "/To-Do-List/static/js/2.42079efa.chunk.js.map",
     "index.html": "/To-Do-List/index.html",
+    "service-worker.js": "/To-Do-List/service-worker.js",
+    "service-worker.js.map": "/To-Do-List/service-worker.js.map",
     "static/css/main.1a74e43c.chunk.css.map": "/To-Do-List/static/css/main.1a74e43c.chunk.css.map",
     "static/js/2.42079efa.chunk.js.LICENSE.txt": "/To-Do-List/static/js/2.42079efa.chunk.js.LICENSE.txt",
     "static/media/delete.90a1fb1c.svg": "/To-Do-List/static/media/delete.90a1fb1c.svg",
@@ -19,6 +21,6 @@
     "static/js/runtime-main.68edf694.js",
     "static/js/2.42079efa.chunk.js",
     "static/css/main.1a74e43c.chunk.css",
-    "static/js/main.a6db5701.chunk.js"
+    "static/js/main.c238e605.chunk.js"
   ]
 }
